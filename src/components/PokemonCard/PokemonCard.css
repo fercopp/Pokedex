@@ -21,3 +21,12 @@
     border-left: 6px solid var(--dark-red);
     border-right: 6px solid var(--dark-red);
 }
+
+.silhoute-image {
+    justify-content: center;
+    width: 50%;
+}
+
+.empty-pokemon-container {
+    text-align: center;
+}

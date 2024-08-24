@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './PokemonCard.css'
 import { usePokedexApi } from '../../hooks/usePokedexApi'
+import pokemonSilhoutte from '/assets/img/pokemon-silhoutte.png'
 
 const PokemonCard = () => {
     const {selectedPokemon} = usePokedexApi()
-    // useEffect(()=>{
-    //     console.log(selectedPokemon)
-    // }, [selectedPokemon.id])
+
     return (
         <div className='pokemon-view-container'>
             {!Object.keys(selectedPokemon).length ? 
-                <div>
+                <div className='empty-pokemon-container'>
                 {/* selectedPokemon object is empty */}
+                    <img className='silhoute-image' src={pokemonSilhoutte} alt="Pokemon Silhoutte Image" />
                     <h3>Please select a Pokemon</h3>
                 </div>
                 : 
