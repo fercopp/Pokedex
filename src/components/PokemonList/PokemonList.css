@@ -7,3 +7,8 @@
     align-self: center;
     padding-right: 3rem;
 }
+
+.pagination-container {
+    width: 100%;
+    justify-content: center;
+}

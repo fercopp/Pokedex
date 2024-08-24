@@ -16,7 +16,7 @@ export const usePokedexApi = () => {
     const getPokemons = async () => {
         try {
             dispatch(setIsLoadingPokemonList(true))
-            const response = await pokeDex.get('pokemon');
+            const response = await pokeDex.get('pokemon?limit=151');
             dispatch(savePokemons(response.data))
         } catch (error) {
             console.log(error)
