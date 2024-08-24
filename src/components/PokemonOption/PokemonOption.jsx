@@ -3,11 +3,18 @@ import './PokemonOption.css'
 import { usePokedexApi } from '../../hooks/usePokedexApi';
 
 const PokemonOption = ({pokemon, isSelected, onSelect}) => {
-    const {getSelectedPokemon} = usePokedexApi();
+    const {getSelectedPokemon, openCardModal} = usePokedexApi();
 
     const handleClick = () => {
+      // First time clicking
+      if(!isSelected){
         getSelectedPokemon(pokemon.name);
         onSelect(pokemon.name); 
+      }
+      // Second time clicking
+      else{
+        openCardModal(true)
+      }
     };
 
     return (

@@ -3,12 +3,19 @@ import {
     savePokemons, 
     saveSelectedPokemon, 
     setIsLoadingPokemonList, 
-    setIsLoadingSelectedPokemon 
+    setIsLoadingSelectedPokemon,
+    handleCardModal 
 } from '../features/pokedex/pokedexSlice';
 import pokeDex from '../../apis/pokedexApi';
 
 export const usePokedexApi = () => {
-    const {pokemons, isLoadingSelectedPokemon, isLoadingPokemonList, selectedPokemon} = useSelector((state) => state.pokedexApi)
+    const {
+        pokemons, 
+        isLoadingSelectedPokemon, 
+        isLoadingPokemonList, 
+        selectedPokemon,
+        isCardModalOpen
+    } = useSelector((state) => state.pokedexApi)
 
     const dispatch = useDispatch();
 
@@ -35,6 +42,14 @@ export const usePokedexApi = () => {
         }
     }
 
+    const openCardModal = (isOpen) => {
+        try {
+            dispatch(handleCardModal(isOpen))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
     return {
         // Properties
@@ -42,10 +57,12 @@ export const usePokedexApi = () => {
         isLoadingSelectedPokemon,
         isLoadingPokemonList,
         selectedPokemon,
+        isCardModalOpen,
 
         // Functions
         getPokemons,
-        getSelectedPokemon
+        getSelectedPokemon,
+        openCardModal
     }
 }
 

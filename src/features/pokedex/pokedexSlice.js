@@ -7,7 +7,8 @@ export const pokedexSlice = createSlice({
         isLoadingPokemonList: false,
         isLoadingSelectedPokemon: false,
         pokemons: [],
-        selectedPokemon: {} 
+        selectedPokemon: {},
+        isCardModalOpen: false 
     },
     reducers: {
         setIsLoadingPokemonList: (state, {payload}) => {
@@ -23,9 +24,12 @@ export const pokedexSlice = createSlice({
         saveSelectedPokemon: (state, {payload}) => {
             state.selectedPokemon = payload;
             state.isLoadingSelectedPokemon = false;
+        },
+        handleCardModal: (state, {payload}) => {
+            state.isCardModalOpen = payload;
         }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { savePokemons, setIsLoadingPokemonList, setIsLoadingSelectedPokemon, saveSelectedPokemon,  } = pokedexSlice.actions
+export const { savePokemons, setIsLoadingPokemonList, setIsLoadingSelectedPokemon, saveSelectedPokemon, handleCardModal } = pokedexSlice.actions

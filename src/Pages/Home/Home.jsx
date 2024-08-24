@@ -1,8 +1,11 @@
 import React from 'react'
 import './Home.css'
-import {PokemonCard, PokemonList} from '../../components'
+import {PokemonCard, PokemonCardModal, PokemonList} from '../../components'
+import { usePokedexApi } from '../../hooks/usePokedexApi'
 
 const Home = () => {
+  const {isCardModalOpen} = usePokedexApi()
+  
   return (
     <div className='container'>
         <div className='column'>
@@ -11,6 +14,7 @@ const Home = () => {
         <div className='column'>
             <PokemonList />
         </div>
+        {isCardModalOpen && <PokemonCardModal />}
     </div>
   )
 }
