@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './PokemonOption.css'
 import { usePokedexApi } from '../../hooks/usePokedexApi';
 
-const PokemonOption = ({pokemon}) => {
+const PokemonOption = ({pokemon, isSelected, onSelect}) => {
     const {getSelectedPokemon} = usePokedexApi();
 
+    const handleClick = () => {
+        getSelectedPokemon(pokemon.name);
+        onSelect(pokemon.name); 
+    };
+
     return (
-        <div onClick={()=> getSelectedPokemon(pokemon.name)} className='pokemonContainer'>
-            {pokemon.name.toUpperCase()}
-        </div>
-    )
+    <button
+      onClick={handleClick}
+      className={`pokemonContainer ${isSelected ? 'selected' : ''}`}
+    >
+      {pokemon.name.toUpperCase()}
+    </button>
+  );
 }
 
 export default PokemonOption

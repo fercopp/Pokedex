@@ -17,7 +17,6 @@ export const usePokedexApi = () => {
         try {
             dispatch(setIsLoadingPokemonList(true))
             const response = await pokeDex.get('pokemon');
-            console.log('resp', response)
             dispatch(savePokemons(response.data))
         } catch (error) {
             console.log(error)
@@ -30,7 +29,6 @@ export const usePokedexApi = () => {
         try {
             dispatch(setIsLoadingSelectedPokemon(true))
             const response = await pokeDex.get(`pokemon/${name}`)
-            console.log(response)
             dispatch(saveSelectedPokemon(response.data))
         } catch (error) {
             console.log(error)

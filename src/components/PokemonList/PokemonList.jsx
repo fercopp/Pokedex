@@ -6,10 +6,15 @@ import {PokemonOption} from '../../components'
 const PokemonList = () => {
     
     const {getPokemons, pokemons, isLoadingPokemonList, getSelectedPokemon} = usePokedexApi()
-    
+    const [selectedPokemon, setSelectedPokemon] = useState(null);
+
     useEffect(()=>{
         getPokemons()
     },[])
+
+    const handleSelection = (pokemonName) => {
+        setSelectedPokemon(pokemonName); // Update the selected pokemon
+    };
 
     return (
         <>
@@ -17,7 +22,7 @@ const PokemonList = () => {
                 <div className='pokemonGrid'>
                     {pokemons?.results?.map((pokemon, index)=>{
                         return (
-                            <PokemonOption pokemon={pokemon} key={index}/>
+                            <PokemonOption pokemon={pokemon} key={index} isSelected={selectedPokemon === pokemon.name} onSelect={handleSelection}/>
                         )
                     })}
                 </div>

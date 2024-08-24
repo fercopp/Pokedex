@@ -9,6 +9,10 @@
     align-self: center;
 }
 
-.pokemonContainer:hover {
+.pokemonContainer:hover,
+.pokemonContainer:active,
+.pokemonContainer:focus,
+.pokemonContainer:visited,
+.pokemonContainer.selected {
     border-color: #3b4cca;
 }
