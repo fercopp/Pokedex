@@ -1,10 +1,10 @@
 .navbar-container {
-    background-color: #3b4cca;
+    background-color: var(--blue);
     width: 100%;
     margin-top: 0;
     height: 5rem;
     display: flex;
-    justify-content: center;
+    justify-content: start;
 }
 
 .pokemon-logo {
@@ -13,4 +13,5 @@
     max-height: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-left: 2rem;
 }

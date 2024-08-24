@@ -1,12 +1,12 @@
 import React from 'react'
 import './Home.css'
-import {PokemonView, PokemonList} from '../../components'
+import {PokemonCard, PokemonList} from '../../components'
 
 const Home = () => {
   return (
     <div className='container'>
         <div className='column'>
-            <PokemonView />
+            <PokemonCard />
         </div>
         <div className='column'>
             <PokemonList />

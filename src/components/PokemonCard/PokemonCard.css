@@ -1,0 +1,23 @@
+.pokemon-name-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #f5f5dc;
+    margin-top: 0;
+    padding-top: 0.5rem;
+}
+
+.pokemon-view-container {
+    align-self: center;
+}
+
+.picture-container {
+    background-color: var(--dark-red);
+    border-radius: 2%;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pokemon-picture {
+    background-color: #f5f5dc;
+    border-left: 6px solid var(--dark-red);
+    border-right: 6px solid var(--dark-red);
+}

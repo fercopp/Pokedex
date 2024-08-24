@@ -14,5 +14,5 @@
 .pokemonContainer:focus,
 .pokemonContainer:visited,
 .pokemonContainer.selected {
-    border-color: #3b4cca;
+    border-color: var(--blue);
 }

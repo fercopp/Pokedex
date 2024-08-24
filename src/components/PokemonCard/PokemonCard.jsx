@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import './PokemonView.css'
+import './PokemonCard.css'
 import { usePokedexApi } from '../../hooks/usePokedexApi'
 
-const PokemonView = () => {
+const PokemonCard = () => {
     const {selectedPokemon} = usePokedexApi()
     // useEffect(()=>{
     //     console.log(selectedPokemon)
@@ -15,14 +15,14 @@ const PokemonView = () => {
                     <h3>Please select a Pokemon</h3>
                 </div>
                 : 
-                <div>
+                <div className='picture-container'>
                 {/* Show selected Pokemon */}
                     <h5 className='pokemon-name-title'>{selectedPokemon.name.toUpperCase()}</h5>
-                    <img src={selectedPokemon?.sprites?.other["official-artwork"]?.front_default} alt={'logo'} />
+                    <img className='pokemon-picture' src={selectedPokemon?.sprites?.other["official-artwork"]?.front_default} alt={'logo'} />
                 </div>
             }
         </div>
     )
 }
 
-export default PokemonView
+export default PokemonCard

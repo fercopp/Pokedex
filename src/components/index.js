@@ -1,9 +1,9 @@
 import PokemonList from "./PokemonList/PokemonList";
 import PokemonOption from "./PokemonOption/PokemonOption";
-import PokemonView from "./PokemonView/PokemonView";
+import PokemonCard from "./PokemonCard/PokemonCard";
 
 export {
-    PokemonView,
+    PokemonCard,
     PokemonList,
     PokemonOption
 }
