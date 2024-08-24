@@ -1,0 +1,14 @@
+.pokemonContainer {
+    border: 2px solid black;
+    padding: 1rem 5rem;
+    flex: 1 1 calc(50% - 1rem);
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5%;
+    align-self: center;
+}
+
+.pokemonContainer:hover {
+    border-color: #3b4cca;
+}

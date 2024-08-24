@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    align-self: center;
+}
+
+.column {
+    flex: 0 0 auto;
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
