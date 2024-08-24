@@ -5,13 +5,38 @@
     height: 5rem;
     display: flex;
     justify-content: start;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .pokemon-logo {
     width: 12.5%;
     max-width: 100%;
-    max-height: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-left: 2rem;
+    max-height: 90%;
+    padding: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+    .pokemon-logo {
+        width: 15%
+    }
+}
+
+@media (max-width: 992px) {
+    .pokemon-logo {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pokemon-logo {
+        width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .pokemon-logo {
+        width: 35%;
+    }
 }
