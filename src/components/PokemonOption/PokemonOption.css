@@ -1,16 +1,18 @@
 .pokemonContainer {
-  border: 2px solid black;
+  border: 2px solid var(--blue);
   padding: 0.65rem;
   flex: 1 1 calc(50% - 1rem);
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
-  border-radius: 5%;
+  border-radius: 10px;
   align-self: center;
   width: 12rem;
   display: flex; 
   justify-content: center; 
+  background-color: var(--blue);
   align-items: center; 
+  color: white;
 }
 
 .pokemonContainer:hover,
@@ -18,5 +20,5 @@
 .pokemonContainer:focus,
 .pokemonContainer:visited,
 .pokemonContainer.selected {
-    border-color: var(--blue);
+    border-color: var(--yellow);
 }
