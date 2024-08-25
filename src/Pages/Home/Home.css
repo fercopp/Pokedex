@@ -2,15 +2,16 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    width: 100%;
+    width: 100%;    
     align-self: center;
     padding-top: 3rem;
     flex-wrap: wrap; 
+    align-items: start;
 }
 
 .column {
     flex: 1;
-    max-width: 50%;
+    max-width: 40%;
     /* width: 100%; */
     display: flex;
     justify-content: center;
@@ -52,13 +53,16 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .column {
-        max-width: 45%;
+        max-width: 40%;
     }
 }
 
 @media (max-width: 992px) {
     .column {
         max-width: 90%;
+    }
+    .container {
+        align-items: start;
     }
 }
 
