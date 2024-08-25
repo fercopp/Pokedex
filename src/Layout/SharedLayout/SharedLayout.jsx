@@ -10,7 +10,7 @@ const SharedLayout = ({children}) => {
         <div className='layout'>
             {children}
         </div>
-        <Footer/>
+        {/* <Footer/> */}
     </>
   )
 }

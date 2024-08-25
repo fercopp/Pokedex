@@ -11,7 +11,7 @@ const Home = () => {
         <div className='column'>
             <PokemonCard />
         </div>
-        <div className='column'>
+        <div className='column pokemon-list'>
             <PokemonList />
         </div>
         {isCardModalOpen && <PokemonCardModal />}

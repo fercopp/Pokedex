@@ -18,12 +18,12 @@ const PokemonOption = ({pokemon, isSelected, onSelect}) => {
     };
 
     return (
-    <button
-      onClick={handleClick}
-      className={`pokemonContainer ${isSelected ? 'selected' : ''}`}
-    >
-      {pokemon.name.toUpperCase()}
-    </button>
+      <button
+        onClick={handleClick}
+        className={`pokemonContainer ${isSelected ? 'selected' : ''}`}
+      >
+        {pokemon.name.toUpperCase()}
+      </button>
   );
 }
 
